@@ -112,3 +112,8 @@ a:hover, a:focus {
 .creative-layout .fixed .top-bar-section ul li > a:hover, .creative-layout .fixed .top-bar-section ul li.active_menu > a {
   color: rgb(1 113 185);
 }
+
+
+table p {
+  margin: 4px 0 !important;
+}
