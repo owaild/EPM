@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>EPM - Contact</title>
+    <link rel="icon" href="fav.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
     <link rel="stylesheet" href="stylesheets/owl.carousel.css">
     <link rel="stylesheet" href="stylesheets/owl.theme.css">
@@ -319,7 +320,63 @@
 
     <script type="text/javascript">
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+
+
+
+  $(document).ready(function () {
+
+        $('#formA').on('submit', function (e) {
+            e.preventDefault();
+
+            //get the name field value
+            var name = $('#Name').val();
+            var Phone = $('#Phone').val();
+            var Emaill = $('#Emaill').val();
+            var Message = $('#Message').val();
+          
+
+            $.ajax({
+                url: 'https://formspree.io/mnqwbqba',
+                method: 'POST',
+                data: {
+                    name: name,
+                    Phone: Phone,
+                    Email: Emaill,
+                    Message: Message,
+                },
+                dataType: "json",
+                success: function () {
+                    swal({
+                        title: "Success!",
+                        text: "You application was sent!",
+                        icon:'success',
+                        timer: 5000,
+                        showCancelButton: false,
+                        showConfirmButton: false
+                    });
+                    $('#Apply').addClass("disaple");
+                    $('#Apply').attr("disabled", 'disabled');
+                },
+                error: function () {
+                    swal({
+                        title: "Error!",
+                        icon:'error',
+                        text: " Please check your information again!",
+                        timer: 5000,
+                        showCancelButton: false,
+                        showConfirmButton: false
+                    });
+                },
+
+            });
+
+        });
+
+        });
+
+function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
       </script>
           <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
