@@ -162,3 +162,13 @@ table p {
     margin-bottom: 15px;
   
 }
+
+.widget-info span {
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  text-transform: capitalize !important;
+}
+.widget-info a {
+  text-transform: none;
+  color: #fff;
+}
